@@ -1,18 +1,17 @@
-package com.example.jose.aligustats.View;
+package jc1o9.aligustats.View;
 
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.jose.aligustats.Controller.Constants;
-import com.example.jose.aligustats.Model.TeamDetails;
-import com.example.jose.aligustats.R;
+import jc1o9.aligustats.Controller.Constants;
+import jc1o9.aligustats.Model.TeamDetails;
+import jc1o9.aligustats.R;
 
 import java.util.ArrayList;
 
@@ -20,7 +19,7 @@ import java.util.ArrayList;
  * Activity for displaying specific player data
  * through object passed by the homepage
  *
- * @author Jose
+ * @author JC1o9
  */
 public class TeamsPage extends AppCompatActivity {
     ArrayList<TeamDetails> mTeamDetails;

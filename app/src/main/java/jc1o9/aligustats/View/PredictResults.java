@@ -1,4 +1,4 @@
-package com.example.jose.aligustats.View;
+package jc1o9.aligustats.View;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,10 +19,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.jose.aligustats.Controller.Constants;
-import com.example.jose.aligustats.Controller.UtilsCheckNet;
-import com.example.jose.aligustats.Model.PredictionOutcomes;
-import com.example.jose.aligustats.R;
+import jc1o9.aligustats.Controller.Constants;
+import jc1o9.aligustats.Controller.UtilsCheckNet;
+import jc1o9.aligustats.Model.PredictionOutcomes;
+import jc1o9.aligustats.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,14 +31,13 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.InetAddress;
 import java.net.URL;
 import java.util.ArrayList;
 
 /**
  * Class that handles the requested match results from a user
  *
- * @author Jose
+ * @author JC1o9
  */
 public class PredictResults extends AppCompatActivity {
     private int mBest_of;

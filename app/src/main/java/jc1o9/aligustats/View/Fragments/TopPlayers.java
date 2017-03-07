@@ -1,4 +1,4 @@
-package com.example.jose.aligustats.View.Fragments;
+package jc1o9.aligustats.View.Fragments;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -19,26 +19,22 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.jose.aligustats.Controller.Constants;
-import com.example.jose.aligustats.Controller.PlayerDetailsDBHelper;
-import com.example.jose.aligustats.Controller.UtilsCheckNet;
-import com.example.jose.aligustats.Model.PlayerDetails;
-import com.example.jose.aligustats.R;
-import com.example.jose.aligustats.View.PlayerPage;
+import jc1o9.aligustats.Controller.Constants;
+import jc1o9.aligustats.Controller.PlayerDetailsDBHelper;
+import jc1o9.aligustats.Controller.UtilsCheckNet;
+import jc1o9.aligustats.Model.PlayerDetails;
+import jc1o9.aligustats.R;
+import jc1o9.aligustats.View.PlayerPage;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.InetAddress;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * class which handles top players in sliding tabs

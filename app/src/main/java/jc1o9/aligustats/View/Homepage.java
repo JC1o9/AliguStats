@@ -1,4 +1,4 @@
-package com.example.jose.aligustats.View;
+package jc1o9.aligustats.View;
 
 import android.app.SearchManager;
 import android.content.BroadcastReceiver;
@@ -18,20 +18,20 @@ import android.view.MenuItem;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import com.example.jose.aligustats.Controller.Constants;
-import com.example.jose.aligustats.Controller.TwitchService;
-import com.example.jose.aligustats.R;
-import com.example.jose.aligustats.TabsLibrary.SlidingTabLayout;
-import com.example.jose.aligustats.View.Fragments.PredictMatch;
-import com.example.jose.aligustats.View.Fragments.TopPlayers;
-import com.example.jose.aligustats.View.Fragments.TopTeams;
+import jc1o9.aligustats.Controller.Constants;
+import jc1o9.aligustats.Controller.TwitchService;
+import jc1o9.aligustats.R;
+import jc1o9.aligustats.TabsLibrary.SlidingTabLayout;
+import jc1o9.aligustats.View.Fragments.PredictMatch;
+import jc1o9.aligustats.View.Fragments.TopPlayers;
+import jc1o9.aligustats.View.Fragments.TopTeams;
 
 /**
  * Homepage and main fragment activity
  * that handles the fragment and sliding tabs of
  * the application as well broadcast for service
  *
- * @author Jose
+ * @author JC1o9
  */
 
 public class Homepage extends AppCompatActivity {

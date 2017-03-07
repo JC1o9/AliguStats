@@ -1,8 +1,8 @@
-package com.example.jose.aligustats.Controller;
+package jc1o9.aligustats.Controller;
 
 /**
  * Constants class containing strings for the application
- * @author Jose
+ * @author JC1o9
  */
 public class Constants {
     public static final String URL_GET_10PLAYERS = "http://www.aligulac.com/api/v1/player/?current_rating__isnull=false&current_rating__decay__lt=4&order_by=-current_rating__rating&limit=10";

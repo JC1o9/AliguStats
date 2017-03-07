@@ -1,4 +1,4 @@
-package com.example.jose.aligustats.Controller;
+package jc1o9.aligustats.Controller;
 
 import java.net.InetAddress;
 

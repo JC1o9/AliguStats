@@ -1,4 +1,4 @@
-package com.example.jose.aligustats.Model;
+package jc1o9.aligustats.Model;
 
 /**
  * Model object that holds prediction data used in Prediction Result activity

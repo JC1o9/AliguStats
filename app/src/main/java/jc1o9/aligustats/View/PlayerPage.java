@@ -1,4 +1,4 @@
-package com.example.jose.aligustats.View;
+package jc1o9.aligustats.View;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -10,9 +10,9 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.jose.aligustats.Controller.Constants;
-import com.example.jose.aligustats.Model.PlayerDetails;
-import com.example.jose.aligustats.R;
+import jc1o9.aligustats.Controller.Constants;
+import jc1o9.aligustats.Model.PlayerDetails;
+import jc1o9.aligustats.R;
 
 import org.w3c.dom.Text;
 
@@ -22,7 +22,7 @@ import java.util.ArrayList;
  * Activity for displaying specific player data
  * through object passed by the top players sliding tab
  *
- * @author Jose
+ * @author JC1o9
  */
 public class PlayerPage extends AppCompatActivity {
     ArrayList<PlayerDetails> mPlayerDetails;

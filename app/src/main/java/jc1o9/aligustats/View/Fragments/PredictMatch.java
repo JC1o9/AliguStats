@@ -1,4 +1,4 @@
-package com.example.jose.aligustats.View.Fragments;
+package jc1o9.aligustats.View.Fragments;
 
 
 import android.content.Intent;
@@ -11,9 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.example.jose.aligustats.Controller.Constants;
-import com.example.jose.aligustats.R;
-import com.example.jose.aligustats.View.PredictResults;
+import jc1o9.aligustats.Controller.Constants;
+import jc1o9.aligustats.R;
+import jc1o9.aligustats.View.PredictResults;
 
 /**
  * class predict match using in sliding tab handles

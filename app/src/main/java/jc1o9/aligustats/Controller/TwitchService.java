@@ -1,10 +1,10 @@
-package com.example.jose.aligustats.Controller;
+package jc1o9.aligustats.Controller;
 
 import android.app.IntentService;
 import android.content.Intent;
 import android.util.Log;
 
-import com.example.jose.aligustats.R;
+import jc1o9.aligustats.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

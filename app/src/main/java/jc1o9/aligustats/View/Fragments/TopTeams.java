@@ -1,4 +1,4 @@
-package com.example.jose.aligustats.View.Fragments;
+package jc1o9.aligustats.View.Fragments;
 
 
 import android.app.ProgressDialog;
@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,12 +19,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.jose.aligustats.Controller.Constants;
-import com.example.jose.aligustats.Controller.TeamDetailsDBHelper;
-import com.example.jose.aligustats.Controller.UtilsCheckNet;
-import com.example.jose.aligustats.Model.TeamDetails;
-import com.example.jose.aligustats.R;
-import com.example.jose.aligustats.View.TeamsPage;
+import jc1o9.aligustats.Controller.Constants;
+import jc1o9.aligustats.Controller.TeamDetailsDBHelper;
+import jc1o9.aligustats.Controller.UtilsCheckNet;
+import jc1o9.aligustats.Model.TeamDetails;
+import jc1o9.aligustats.R;
+import jc1o9.aligustats.View.TeamsPage;
 
 import org.json.JSONArray;
 import org.json.JSONException;

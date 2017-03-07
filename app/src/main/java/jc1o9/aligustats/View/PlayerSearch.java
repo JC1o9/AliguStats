@@ -1,4 +1,4 @@
-package com.example.jose.aligustats.View;
+package jc1o9.aligustats.View;
 
 import android.app.ProgressDialog;
 import android.app.SearchManager;
@@ -14,10 +14,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.jose.aligustats.Controller.Constants;
-import com.example.jose.aligustats.Controller.UtilsCheckNet;
-import com.example.jose.aligustats.Model.PlayerDetails;
-import com.example.jose.aligustats.R;
+import jc1o9.aligustats.Controller.Constants;
+import jc1o9.aligustats.Controller.UtilsCheckNet;
+import jc1o9.aligustats.Model.PlayerDetails;
+import jc1o9.aligustats.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,7 +26,6 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.InetAddress;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -36,7 +35,7 @@ import java.util.ArrayList;
  * API for player matching name grabs matching ID and then requests player object
  * based on player for specific details
  *
- * @author Jose
+ * @author JC1o9
  */
 public class PlayerSearch extends AppCompatActivity {
     private ArrayList<PlayerDetails> mPlayerDetails;

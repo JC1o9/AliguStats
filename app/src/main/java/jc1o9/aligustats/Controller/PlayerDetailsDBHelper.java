@@ -1,4 +1,4 @@
-package com.example.jose.aligustats.Controller;
+package jc1o9.aligustats.Controller;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,14 +6,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.jose.aligustats.Model.PlayerDetails;
+import jc1o9.aligustats.Model.PlayerDetails;
 
 import java.util.ArrayList;
 
 /**
  * Database helper class for showing the top players
  * contains create, upgrade, and fetch all objects in the DB
- * @author Jose
+ * @author JC1o9
  */
 public class PlayerDetailsDBHelper extends SQLiteOpenHelper{
     private static final int DB_VERSION = 1;

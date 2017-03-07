@@ -1,4 +1,4 @@
-package com.example.jose.aligustats.TabsLibrary;
+package jc1o9.aligustats.TabsLibrary;
 
 /**
  * External google library for slidingTabs
@@ -27,7 +27,6 @@ import android.graphics.Color;
 import android.R;
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.TypedValue;
