@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.jose.aligustats.View.PredictMatch">
+
+    <EditText
+        android:id="@+id/predict_editPlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_player1"
+        android:digits="@string/alphabet"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:nextFocusDown="@+id/predict_editPlayer2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:inputType="text"
+        android:layout_marginTop="84dp" />
+
+    <EditText
+        android:id="@+id/predict_editPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_player2"
+        android:digits="@string/alphabet"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:nextFocusDown="@+id/predict_bestOf"
+        android:layout_marginTop="51dp"
+        android:inputType="text"
+        android:layout_below="@+id/predict_editPlayer1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/predict_bestOf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/predict_editPlayer2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp"
+        android:entries="@array/Best_of"
+        android:prompt="@string/prompt_bestof">
+    </Spinner>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/predict_match"
+        android:id="@+id/btnPredict"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="44dp" />
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jose.aligustats" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_starcraft_ii_legacy_of_the_void"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".View.Homepage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".View.PlayerSearch" />
+        </activity>
+
+        <service android:name=".Controller.TwitchService" />
+
+        <activity
+            android:name=".View.PlayerPage"
+            android:label="@string/title_activity_player_page"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".View.PredictResults"
+            android:label="@string/title_activity_predict_results"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".View.PlayerSearch"
+            android:label="@string/title_activity_player_search"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".View.TeamsPage"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_teams_page" >
+        </activity>
+    </application>
+
+</manifest>

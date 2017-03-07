@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">AliguStats</string>
+
+    <string name="sc_typeface">starcraft.ttf</string>
+
+    <string name="playerRace">PlayerRace</string>
+    <string name="title_activity_player_page">PlayerPage</string>
+    <string name="currentTeam">Current Team:</string>
+    <string name="totalEarnings">Total Earnings:</string>
+    <string name="RomanizedName">Romanized_name:</string>
+
+    <string name="objects">objects</string>
+    <string name="tag">tag</string>
+    <string name="race">race</string>
+    <string name="earnings">total_earnings</string>
+    <string name="romanizedName">romanized_name</string>
+    <string name="currentTeams">current_teams</string>
+    <string name="team">team</string>
+    <string name="name">name</string>
+
+    <string name="enter_player1">Enter Player 1 name:</string>
+    <string name="enter_player2">Enter Player 2 name:</string>
+    <string name="predict_match">Predict Match</string>
+    <string name="prompt_bestof">Best of</string>
+
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_top_teams">TopTeams</string>
+    <string name="title_activity_predict_results">PredictResults</string>
+    <string name="title_activity_player_search">PlayerSearch</string>
+    <string name="title_activity_team_page">Team Page</string>
+    <string name="title_activity_teams_page">TeamsPage</string>
+
+    <string name="connected">Connected</string>
+    <string name="error">ERROR</string>
+    <string name="connecting_to">Connecting to Aligulac...</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="connection_timeout">Connection Timeout...</string>
+
+    <string name="proleague_score">Proleague Score</string>
+    <string name="team_name">Team Name</string>
+    <string name="teamName">shortname</string>
+    <string name="proleagueScore">scorepl</string>
+    <string name="allKillScore">scoreak</string>
+
+    <string name="players">players</string>
+    <string name="player_id">id</string>
+    <string name="predict_outcomes">outcomes</string>
+    <string name="probability">prob</string>
+    <string name="scoreA">sca</string>
+    <string name="scoreB">scb</string>
+    <string name="player_a">pla</string>
+    <string name="player_b">plb</string>
+    <string name="prob_a">proba</string>
+    <string name="prob_b">probb</string>
+
+    <string name="stream">stream</string>
+    <string name="gslOnline">GSL Channel is Online</string>
+    <string name="gslOffline">GSL Channel is Offline</string>
+    <string name="search">Search</string>
+
+    <string name="alphabet">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="pl1NotFound">player1 not found</string>
+    <string name="pl2NotFound">player2 not found</string>
+    <string name="player1NotFoundStr">Player 1 Not found</string>
+    <string name="player2NotFoundStr">Player 2 Not found</string>
+    <string name="errorTryAgain">Error, Please try again</string>
+    <string name="failedConnection">Failed to connect to Aligulac</string>
+    <string name="FailedConnectionTwitch">Failed to connect to Twitch.tv</string>
+    <string name="plNotFound">Player not found</string>
+    <string name="currentRating">current_rating</string>
+    <string name="resourceUri">resource_uri</string>
+    <string name="rank">position</string>
+    <string name="playerID">id</string>
+
+    <string name="noActiveTeam">No active team</string>
+    <string name="noRName">null</string>
+    <string name="not_applicable">N/A</string>
+    <string name="loadedDB">Loaded from database</string>
+    <string name="matchAdv">"Match advantage to "</string>
+    <string name="resultsOf">"Results of "</string>
+    <string name="vs">" Vs "</string>
+    <string name="dbEmpty">Database is empty</string>
+
+    <string-array name="tabs">
+        <item>Predict Match</item>
+        <item>Top Players</item>
+        <item>Top Teams</item>
+    </string-array>
+
+    <string-array name="Best_of">
+        <item>Best of 1</item>
+        <item>Best of 3</item>
+        <item>Best of 5</item>
+        <item>Best of 7</item>
+    </string-array>
+
+</resources>
