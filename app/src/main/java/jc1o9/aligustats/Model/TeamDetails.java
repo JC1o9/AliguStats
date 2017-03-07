@@ -6,7 +6,7 @@ import android.os.Parcelable;
 /**
  * Model object that holds team data used throughout the app
  * Contains getters, setters and is parcelable to pass through intents
- * @author Jose
+ * @author JC1o9
  */
 public class TeamDetails implements Parcelable{
     private String mName;

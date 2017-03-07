@@ -4,7 +4,7 @@ package jc1o9.aligustats.Model;
  * Model object that holds prediction data used in Prediction Result activity
  * Contains getters to retrieve data
  *
- * @author Jose
+ * @author JC1o9
  */
 public class PredictionOutcomes {
     private double mProb;

@@ -6,7 +6,7 @@ import android.os.Parcelable;
 /**
  * Model object that holds the player data used throughout the app
  * Contains setters, getters and is parcelable to be passed through intents
- * @author Jose
+ * @author JC1o9
  */
 public class PlayerDetails implements Parcelable {
     private String mName;
