@@ -6,7 +6,7 @@ import java.net.InetAddress;
  * Util class for checking if the aligulac website is down or up
  * used throughout the app when perfoming API requests during Async tasks
  *
- * @author Jose
+ * @author JC1o9
  */
 public class UtilsCheckNet {
 
