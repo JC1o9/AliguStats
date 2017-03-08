@@ -10,11 +10,11 @@
         android:orientation="vertical"
         tools:context=".View.Homepage">
 
-        <com.example.jose.aligustats.TabsLibrary.SlidingTabLayout
+        <jc1o9.aligustats.TabsLibrary.SlidingTabLayout
             android:id="@+id/slidingTabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        </com.example.jose.aligustats.TabsLibrary.SlidingTabLayout>
+        </jc1o9.aligustats.TabsLibrary.SlidingTabLayout>
 
         <View
             android:layout_width="match_parent"

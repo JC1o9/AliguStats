@@ -52,11 +52,6 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity
-            android:name=".View.TeamsPage"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_teams_page" >
-        </activity>
     </application>
 
 </manifest>

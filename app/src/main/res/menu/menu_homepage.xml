@@ -9,7 +9,7 @@
         app:actionViewClass="android.widget.SearchView"/>
 
     <item android:id="@+id/checkStreams"
-        android:title="Check GSL Stream"
+        android:title="@string/check_gsl_stream"
         android:onClick="StartService"/>
 
 </menu>

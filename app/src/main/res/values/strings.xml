@@ -81,6 +81,7 @@
     <string name="resultsOf">"Results of "</string>
     <string name="vs">" Vs "</string>
     <string name="dbEmpty">Database is empty</string>
+    <string name="check_gsl_stream">Check GSL Stream</string>
 
     <string-array name="tabs">
         <item>Predict Match</item>

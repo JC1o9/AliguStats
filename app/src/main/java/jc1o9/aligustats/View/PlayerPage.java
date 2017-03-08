@@ -5,7 +5,6 @@ import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,8 +12,6 @@ import android.widget.TextView;
 import jc1o9.aligustats.Controller.Constants;
 import jc1o9.aligustats.Model.PlayerDetails;
 import jc1o9.aligustats.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 

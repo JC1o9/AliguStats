@@ -18,6 +18,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import jc1o9.aligustats.Controller.Constants;
 import jc1o9.aligustats.Controller.PlayerDetailsDBHelper;
@@ -295,8 +296,10 @@ public class TopPlayers extends Fragment {
 
             //Run database if no connection otherwise update adapter
             if (!s.equals(getString(R.string.connection_timeout))) {
+                Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();
                 mTopPlayersAdapter.notifyDataSetChanged();
             } else {
+                Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();
                 runDB();
             }
         }
@@ -309,6 +312,14 @@ public class TopPlayers extends Fragment {
             mPlayerDetails = mPlayerDB.getAllPlayers();
             mTopPlayersAdapter.mTopPlayers = mPlayerDetails;
             mTopPlayersAdapter.notifyDataSetChanged();
+
+            //Notify the user there is no existing database
+            if (mPlayerDetails.size() == 0) {
+                Toast.makeText(getActivity(), R.string.dbEmpty, Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(getActivity(), R.string.loadedDB, Toast.LENGTH_LONG).show();
+            }
         }
+
     }
 }

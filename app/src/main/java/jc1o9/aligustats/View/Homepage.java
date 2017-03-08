@@ -5,14 +5,13 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
@@ -24,7 +23,6 @@ import jc1o9.aligustats.R;
 import jc1o9.aligustats.TabsLibrary.SlidingTabLayout;
 import jc1o9.aligustats.View.Fragments.PredictMatch;
 import jc1o9.aligustats.View.Fragments.TopPlayers;
-import jc1o9.aligustats.View.Fragments.TopTeams;
 
 /**
  * Homepage and main fragment activity
@@ -46,6 +44,8 @@ public class Homepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
+        mContext = this;
+
         //get references for pager and tabs
         ViewPager mPager = (ViewPager) findViewById(R.id.viewPager);
         SlidingTabLayout mTabs = (SlidingTabLayout) findViewById(R.id.slidingTabs);
@@ -54,12 +54,10 @@ public class Homepage extends AppCompatActivity {
         mPager.setAdapter(new PagerAdapter(getSupportFragmentManager()));
         mTabs.setViewPager(mPager);
         mPager.setCurrentItem(1);
-        mPager.setOffscreenPageLimit(3);
+        mPager.setOffscreenPageLimit(2);
         mTabs.setDistributeEvenly(true);
-        mTabs.setSelectedIndicatorColors(getResources().getColor(R.color.ColorBackground));
-        mTabs.setBackgroundColor(getResources().getColor(R.color.ColorPrimary));
-
-        mContext = this;
+        mTabs.setSelectedIndicatorColors(ContextCompat.getColor(mContext,R.color.ColorBackground));
+        mTabs.setBackgroundColor(ContextCompat.getColor(mContext,R.color.ColorPrimary));
 
         //set receivers
         registerReceiver(streamReceiver, new IntentFilter(Constants.STREAM_RESULT));
@@ -100,11 +98,11 @@ public class Homepage extends AppCompatActivity {
     fragment adapter class that handles the sliding tabs
     using tabsLibrary
      */
-    class PagerAdapter extends FragmentPagerAdapter {
+    private class PagerAdapter extends FragmentPagerAdapter {
 
         String[] tabs;
 
-        public PagerAdapter(FragmentManager fm) {
+        PagerAdapter(FragmentManager fm) {
             super(fm);
             tabs = getResources().getStringArray(R.array.tabs);
         }
@@ -117,8 +115,6 @@ public class Homepage extends AppCompatActivity {
                     return new PredictMatch();
                 case 1:
                     return new TopPlayers();
-                case 2:
-                    return new TopTeams();
             }
             return null;
         }
@@ -131,7 +127,7 @@ public class Homepage extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
     }
 
