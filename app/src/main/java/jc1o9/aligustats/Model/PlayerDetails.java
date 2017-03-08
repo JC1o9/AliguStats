@@ -16,11 +16,12 @@ public class PlayerDetails implements Parcelable {
     private String mCurrentTeam;
     private int mRanking;
     private int mID;
+    private double mScore;
 
     public PlayerDetails() {
     }
 
-    public PlayerDetails(String Name, String Race, String RomanizedName, String TotalEarnings, String CurrentTeam, int ranking, int id) {
+    public PlayerDetails(String Name, String Race, String RomanizedName, String TotalEarnings, String CurrentTeam, int ranking, int id, double score) {
         this.mName = Name;
         this.mRace = Race;
         this.mRomanizedName = RomanizedName;
@@ -28,6 +29,7 @@ public class PlayerDetails implements Parcelable {
         this.mCurrentTeam = CurrentTeam;
         this.mRanking = ranking;
         this.mID = id;
+        this.mScore = score;
     }
 
     protected PlayerDetails(Parcel in) {
@@ -38,6 +40,7 @@ public class PlayerDetails implements Parcelable {
         mCurrentTeam = in.readString();
         mRanking = in.readInt();
         mID = in.readInt();
+        mScore = in.readDouble();
     }
 
     public static final Creator<PlayerDetails> CREATOR = new Creator<PlayerDetails>() {
@@ -81,6 +84,10 @@ public class PlayerDetails implements Parcelable {
         return mID;
     }
 
+    public double getScore() {
+        return mScore;
+    }
+
     //=============SETTERS=================//
 
 
@@ -108,8 +115,12 @@ public class PlayerDetails implements Parcelable {
         this.mRanking = ranking;
     }
 
-    public void setmID(int mID) {
-        this.mID = mID;
+    public void setmID(int id) {
+        this.mID = id;
+    }
+
+    public void setScore(int score) {
+        this.mScore = score;
     }
 
     @Override
@@ -126,5 +137,6 @@ public class PlayerDetails implements Parcelable {
         dest.writeString(mCurrentTeam);
         dest.writeInt(mRanking);
         dest.writeInt(mID);
+        dest.writeDouble(mScore);
     }
 }

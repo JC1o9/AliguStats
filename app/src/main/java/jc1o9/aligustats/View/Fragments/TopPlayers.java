@@ -40,7 +40,7 @@ import java.util.ArrayList;
 /**
  * class which handles top players in sliding tabs
  * performs async then passes a specific selected player
- * from the listview to the PlayerPage class
+// * from the listview to the PlayerPage class
  */
 public class TopPlayers extends Fragment {
     private ArrayList<PlayerDetails> mPlayerDetails;
@@ -66,6 +66,8 @@ public class TopPlayers extends Fragment {
         displayName.setAdapter(mTopPlayersAdapter);
 
         new AsyncTopPlayersDetails().execute();
+
+
 
         //ItemClickListener to handle when a user selects a top player for more
         //information
@@ -93,11 +95,11 @@ public class TopPlayers extends Fragment {
     Adapter class for populating the list via information
     acquired through the API
     */
-    public class TopPlayersAdapter extends BaseAdapter {
+    private class TopPlayersAdapter extends BaseAdapter {
         private ArrayList<PlayerDetails> mTopPlayers;
         private Context mContext;
 
-        public TopPlayersAdapter(Context context, ArrayList<PlayerDetails> name) {
+        TopPlayersAdapter(Context context, ArrayList<PlayerDetails> name) {
             this.mTopPlayers = name;
             this.mContext = context;
         }
@@ -130,6 +132,7 @@ public class TopPlayers extends Fragment {
             String raceStr = currentName.getRace();
 
             TextView playerName = (TextView) view.findViewById(R.id.view_home_playerName);
+            TextView playerScore = (TextView) view.findViewById(R.id.view_home_playerScore);
             TextView playerRank = (TextView) view.findViewById(R.id.view_home_pos);
             ImageView race = (ImageView) view.findViewById(R.id.img_home_race);
 
@@ -137,8 +140,10 @@ public class TopPlayers extends Fragment {
             Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(), getString(R.string.sc_typeface));
             playerName.setTypeface(typeface);
             playerRank.setTypeface(typeface);
+            playerScore.setTypeface(typeface);
             playerName.setTextColor(Color.BLACK);
             playerRank.setTextColor(Color.BLACK);
+            playerScore.setTextColor(Color.BLACK);
 
             switch (raceStr) {
                 case "Z":
@@ -154,13 +159,16 @@ public class TopPlayers extends Fragment {
 
             playerName.setText(currentName.getName());
             playerRank.setText(String.valueOf(currentName.getRanking()) + ". ");
+            double percentageScore = currentName.getScore() * 100;
+            String percentage = String.format("%.2f",percentageScore);
+            playerScore.setText(percentage);
 
             return view;
         }
     }
 
     //Async Connecting to API and requesting json data
-    class AsyncTopPlayersDetails extends AsyncTask<Void, Void, String> {
+    private class AsyncTopPlayersDetails extends AsyncTask<Void, Void, String> {
         ProgressDialog mTopPlayerDialog;
         HttpURLConnection mUrlConnect;
 
@@ -213,11 +221,18 @@ public class TopPlayers extends Fragment {
                             String earnings = currentObj.optString(getString(R.string.earnings));
                             String romanizedName = currentObj.optString(getString(R.string.romanizedName));
                             String currentTeam;
+                            double currentScore;
 
                             //Error trap for players with no korean name
                             if (romanizedName.equals(getString(R.string.noRName))) {
                                 romanizedName = getString(R.string.not_applicable);
                             }
+
+                            //Get player's current Winrate(score)
+                            JSONObject current_form_obj = currentObj.getJSONObject("form");
+                            JSONArray scoreArray = current_form_obj.getJSONArray("total");
+                            currentScore = scoreArray.optDouble(0) + scoreArray.optDouble(1);
+                            currentScore = scoreArray.optDouble(0) / currentScore;
 
                             //get player's current team from json arrays and object
                             JSONArray current_teams_obj = currentObj.getJSONArray(getString(R.string.currentTeams));
@@ -268,8 +283,8 @@ public class TopPlayers extends Fragment {
                             }
 
                             //Add player to database and create new instance object for adapter use
-                            mPlayerDB.createPlayer(new PlayerDetails(name, race, romanizedName, earnings, currentTeam, ranking, id));
-                            PlayerDetails currentPlayer = new PlayerDetails(name, race, romanizedName, earnings, currentTeam, ranking, id);
+                            mPlayerDB.createPlayer(new PlayerDetails(name, race, romanizedName, earnings, currentTeam, ranking, id, currentScore));
+                            PlayerDetails currentPlayer = new PlayerDetails(name, race, romanizedName, earnings, currentTeam, ranking, id, currentScore);
 
                             mPlayerDetails.add(currentPlayer);
                         }

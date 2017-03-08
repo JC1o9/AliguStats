@@ -213,6 +213,13 @@ public class PlayerSearch extends AppCompatActivity {
                         String race = jsonRootObject.optString(getString(R.string.race));
                         String earnings = jsonRootObject.optString(getString(R.string.earnings));
                         String romanizedName = jsonRootObject.optString(getString(R.string.romanizedName));
+                        double currentScore;
+
+                        //Get player's current Winrate(score)
+                        JSONObject current_form_obj = jsonRootObject.getJSONObject("form");
+                        JSONArray scoreArray = current_form_obj.getJSONArray("total");
+                        currentScore = scoreArray.optDouble(0) + scoreArray.optDouble(1);
+                        currentScore = scoreArray.optDouble(0) / currentScore;
 
                         //Error trap for player with no korean name
                         if (romanizedName.equals(getString(R.string.noRName))){
@@ -271,7 +278,7 @@ public class PlayerSearch extends AppCompatActivity {
                         }
 
                         //create new player object and add it to the list
-                        PlayerDetails searchedPlayer = new PlayerDetails(name, race, romanizedName, earnings, currentTeam, ranking, id);
+                        PlayerDetails searchedPlayer = new PlayerDetails(name, race, romanizedName, earnings, currentTeam, ranking, id, currentScore);
                         mPlayerDetails.add(searchedPlayer);
                         return getString(R.string.connected);
                     } catch (JSONException e) {
