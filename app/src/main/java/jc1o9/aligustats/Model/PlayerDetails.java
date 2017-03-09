@@ -17,11 +17,12 @@ public class PlayerDetails implements Parcelable {
     private int mRanking;
     private int mID;
     private double mScore;
+    private double[][] mScoreArray;
 
     public PlayerDetails() {
     }
 
-    public PlayerDetails(String Name, String Race, String RomanizedName, String TotalEarnings, String CurrentTeam, int ranking, int id, double score) {
+    public PlayerDetails(String Name, String Race, String RomanizedName, String TotalEarnings, String CurrentTeam, int ranking, int id, double score, double[][] scoreArray) {
         this.mName = Name;
         this.mRace = Race;
         this.mRomanizedName = RomanizedName;
@@ -30,6 +31,8 @@ public class PlayerDetails implements Parcelable {
         this.mRanking = ranking;
         this.mID = id;
         this.mScore = score;
+        //this.mScoreArray = new double[3][2];
+        this.mScoreArray = scoreArray;
     }
 
     protected PlayerDetails(Parcel in) {
@@ -41,6 +44,7 @@ public class PlayerDetails implements Parcelable {
         mRanking = in.readInt();
         mID = in.readInt();
         mScore = in.readDouble();
+        //TODO::add double array pass
     }
 
     public static final Creator<PlayerDetails> CREATOR = new Creator<PlayerDetails>() {
@@ -138,5 +142,6 @@ public class PlayerDetails implements Parcelable {
         dest.writeInt(mRanking);
         dest.writeInt(mID);
         dest.writeDouble(mScore);
+//TODO::add double array
     }
 }

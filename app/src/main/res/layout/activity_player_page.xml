@@ -128,7 +128,8 @@
             android:paddingLeft="10dp"
             android:text="Current Global Rank: "
             android:textStyle="bold"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:id="@+id/textView" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -138,5 +139,14 @@
             android:layout_alignParentRight="true"
             android:textStyle="bold"
             android:textSize="18sp"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/playerChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView">
+
+        </com.github.mikephil.charting.charts.PieChart>
     </RelativeLayout>
+
 </RelativeLayout>

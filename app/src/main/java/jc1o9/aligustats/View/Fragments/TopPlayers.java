@@ -161,7 +161,7 @@ public class TopPlayers extends Fragment {
             playerRank.setText(String.valueOf(currentName.getRanking()) + ". ");
             double percentageScore = currentName.getScore() * 100;
             String percentage = String.format("%.2f",percentageScore);
-            playerScore.setText(percentage);
+            playerScore.setText(percentage + "%");
 
             return view;
         }
